@@ -58,9 +58,9 @@ public class Main {
                 (request, response) -> {
                      int  id = Integer.valueOf(request.queryParams("id"));
 
-                    Person per = people.get(id - 1);
+                    Person p = people.get(id - 1);
 
-                    return new ModelAndView(per, "person.html");
+                    return new ModelAndView(p, "person.html");
 
                 },
                 new MustacheTemplateEngine()
